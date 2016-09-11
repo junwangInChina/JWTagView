@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAA255E01D85049C00BF1C5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA255DF1D85049C00BF1C5F /* main.m */; };
+		DAA255E31D85049C00BF1C5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA255E21D85049C00BF1C5F /* AppDelegate.m */; };
+		DAA255E61D85049C00BF1C5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA255E51D85049C00BF1C5F /* ViewController.m */; };
+		DAA255E91D85049C00BF1C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA255E71D85049C00BF1C5F /* Main.storyboard */; };
+		DAA255EB1D85049C00BF1C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA255EA1D85049C00BF1C5F /* Assets.xcassets */; };
+		DAA255EE1D85049C00BF1C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA255EC1D85049C00BF1C5F /* LaunchScreen.storyboard */; };
+		DAA255F91D85049C00BF1C5F /* JWTagViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA255F81D85049C00BF1C5F /* JWTagViewTests.m */; };
+		DAA256041D85049C00BF1C5F /* JWTagViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA256031D85049C00BF1C5F /* JWTagViewUITests.m */; };
+		DAA256141D8504F400BF1C5F /* JWTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA256131D8504F400BF1C5F /* JWTagView.m */; };
+		DAA256171D852EC800BF1C5F /* BaseUseController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA256161D852EC800BF1C5F /* BaseUseController.m */; };
+		DAA2561A1D852ED100BF1C5F /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA256191D852ED100BF1C5F /* SortViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAA255F51D85049C00BF1C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAA255D31D85049C00BF1C5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAA255DA1D85049C00BF1C5F;
+			remoteInfo = JWTagView;
+		};
+		DAA256001D85049C00BF1C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAA255D31D85049C00BF1C5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAA255DA1D85049C00BF1C5F;
+			remoteInfo = JWTagView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAA255DB1D85049C00BF1C5F /* JWTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA255DF1D85049C00BF1C5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAA255E11D85049C00BF1C5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAA255E21D85049C00BF1C5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAA255E41D85049C00BF1C5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAA255E51D85049C00BF1C5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAA255E81D85049C00BF1C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAA255EA1D85049C00BF1C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAA255ED1D85049C00BF1C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAA255EF1D85049C00BF1C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA255F41D85049C00BF1C5F /* JWTagViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWTagViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA255F81D85049C00BF1C5F /* JWTagViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWTagViewTests.m; sourceTree = "<group>"; };
+		DAA255FA1D85049C00BF1C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA255FF1D85049C00BF1C5F /* JWTagViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWTagViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA256031D85049C00BF1C5F /* JWTagViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWTagViewUITests.m; sourceTree = "<group>"; };
+		DAA256051D85049C00BF1C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA256121D8504F400BF1C5F /* JWTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTagView.h; sourceTree = "<group>"; };
+		DAA256131D8504F400BF1C5F /* JWTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTagView.m; sourceTree = "<group>"; };
+		DAA256151D852EC800BF1C5F /* BaseUseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUseController.h; sourceTree = "<group>"; };
+		DAA256161D852EC800BF1C5F /* BaseUseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUseController.m; sourceTree = "<group>"; };
+		DAA256181D852ED100BF1C5F /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
+		DAA256191D852ED100BF1C5F /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAA255D81D85049C00BF1C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255F11D85049C00BF1C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255FC1D85049C00BF1C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAA255D21D85049C00BF1C5F = {
+			isa = PBXGroup;
+			children = (
+				DAA255DD1D85049C00BF1C5F /* JWTagView */,
+				DAA255F71D85049C00BF1C5F /* JWTagViewTests */,
+				DAA256021D85049C00BF1C5F /* JWTagViewUITests */,
+				DAA255DC1D85049C00BF1C5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAA255DC1D85049C00BF1C5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAA255DB1D85049C00BF1C5F /* JWTagView.app */,
+				DAA255F41D85049C00BF1C5F /* JWTagViewTests.xctest */,
+				DAA255FF1D85049C00BF1C5F /* JWTagViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAA255DD1D85049C00BF1C5F /* JWTagView */ = {
+			isa = PBXGroup;
+			children = (
+				DAA256111D8504D200BF1C5F /* JWTagView */,
+				DAA255E11D85049C00BF1C5F /* AppDelegate.h */,
+				DAA255E21D85049C00BF1C5F /* AppDelegate.m */,
+				DAA255E41D85049C00BF1C5F /* ViewController.h */,
+				DAA255E51D85049C00BF1C5F /* ViewController.m */,
+				DAA256151D852EC800BF1C5F /* BaseUseController.h */,
+				DAA256161D852EC800BF1C5F /* BaseUseController.m */,
+				DAA256181D852ED100BF1C5F /* SortViewController.h */,
+				DAA256191D852ED100BF1C5F /* SortViewController.m */,
+				DAA255E71D85049C00BF1C5F /* Main.storyboard */,
+				DAA255EA1D85049C00BF1C5F /* Assets.xcassets */,
+				DAA255EC1D85049C00BF1C5F /* LaunchScreen.storyboard */,
+				DAA255EF1D85049C00BF1C5F /* Info.plist */,
+				DAA255DE1D85049C00BF1C5F /* Supporting Files */,
+			);
+			path = JWTagView;
+			sourceTree = "<group>";
+		};
+		DAA255DE1D85049C00BF1C5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAA255DF1D85049C00BF1C5F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAA255F71D85049C00BF1C5F /* JWTagViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAA255F81D85049C00BF1C5F /* JWTagViewTests.m */,
+				DAA255FA1D85049C00BF1C5F /* Info.plist */,
+			);
+			path = JWTagViewTests;
+			sourceTree = "<group>";
+		};
+		DAA256021D85049C00BF1C5F /* JWTagViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAA256031D85049C00BF1C5F /* JWTagViewUITests.m */,
+				DAA256051D85049C00BF1C5F /* Info.plist */,
+			);
+			path = JWTagViewUITests;
+			sourceTree = "<group>";
+		};
+		DAA256111D8504D200BF1C5F /* JWTagView */ = {
+			isa = PBXGroup;
+			children = (
+				DAA256121D8504F400BF1C5F /* JWTagView.h */,
+				DAA256131D8504F400BF1C5F /* JWTagView.m */,
+			);
+			path = JWTagView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAA255DA1D85049C00BF1C5F /* JWTagView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA256081D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagView" */;
+			buildPhases = (
+				DAA255D71D85049C00BF1C5F /* Sources */,
+				DAA255D81D85049C00BF1C5F /* Frameworks */,
+				DAA255D91D85049C00BF1C5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWTagView;
+			productName = JWTagView;
+			productReference = DAA255DB1D85049C00BF1C5F /* JWTagView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAA255F31D85049C00BF1C5F /* JWTagViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA2560B1D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagViewTests" */;
+			buildPhases = (
+				DAA255F01D85049C00BF1C5F /* Sources */,
+				DAA255F11D85049C00BF1C5F /* Frameworks */,
+				DAA255F21D85049C00BF1C5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAA255F61D85049C00BF1C5F /* PBXTargetDependency */,
+			);
+			name = JWTagViewTests;
+			productName = JWTagViewTests;
+			productReference = DAA255F41D85049C00BF1C5F /* JWTagViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAA255FE1D85049C00BF1C5F /* JWTagViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA2560E1D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagViewUITests" */;
+			buildPhases = (
+				DAA255FB1D85049C00BF1C5F /* Sources */,
+				DAA255FC1D85049C00BF1C5F /* Frameworks */,
+				DAA255FD1D85049C00BF1C5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAA256011D85049C00BF1C5F /* PBXTargetDependency */,
+			);
+			name = JWTagViewUITests;
+			productName = JWTagViewUITests;
+			productReference = DAA255FF1D85049C00BF1C5F /* JWTagViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAA255D31D85049C00BF1C5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = wangjun;
+				TargetAttributes = {
+					DAA255DA1D85049C00BF1C5F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DAA255F31D85049C00BF1C5F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DAA255DA1D85049C00BF1C5F;
+					};
+					DAA255FE1D85049C00BF1C5F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DAA255DA1D85049C00BF1C5F;
+					};
+				};
+			};
+			buildConfigurationList = DAA255D61D85049C00BF1C5F /* Build configuration list for PBXProject "JWTagView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAA255D21D85049C00BF1C5F;
+			productRefGroup = DAA255DC1D85049C00BF1C5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAA255DA1D85049C00BF1C5F /* JWTagView */,
+				DAA255F31D85049C00BF1C5F /* JWTagViewTests */,
+				DAA255FE1D85049C00BF1C5F /* JWTagViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAA255D91D85049C00BF1C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA255EE1D85049C00BF1C5F /* LaunchScreen.storyboard in Resources */,
+				DAA255EB1D85049C00BF1C5F /* Assets.xcassets in Resources */,
+				DAA255E91D85049C00BF1C5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255F21D85049C00BF1C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255FD1D85049C00BF1C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAA255D71D85049C00BF1C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA2561A1D852ED100BF1C5F /* SortViewController.m in Sources */,
+				DAA255E61D85049C00BF1C5F /* ViewController.m in Sources */,
+				DAA255E31D85049C00BF1C5F /* AppDelegate.m in Sources */,
+				DAA256171D852EC800BF1C5F /* BaseUseController.m in Sources */,
+				DAA256141D8504F400BF1C5F /* JWTagView.m in Sources */,
+				DAA255E01D85049C00BF1C5F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255F01D85049C00BF1C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA255F91D85049C00BF1C5F /* JWTagViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA255FB1D85049C00BF1C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA256041D85049C00BF1C5F /* JWTagViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAA255F61D85049C00BF1C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAA255DA1D85049C00BF1C5F /* JWTagView */;
+			targetProxy = DAA255F51D85049C00BF1C5F /* PBXContainerItemProxy */;
+		};
+		DAA256011D85049C00BF1C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAA255DA1D85049C00BF1C5F /* JWTagView */;
+			targetProxy = DAA256001D85049C00BF1C5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAA255E71D85049C00BF1C5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA255E81D85049C00BF1C5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAA255EC1D85049C00BF1C5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA255ED1D85049C00BF1C5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAA256061D85049C00BF1C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAA256071D85049C00BF1C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAA256091D85049C00BF1C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JWTagView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAA2560A1D85049C00BF1C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JWTagView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAA2560C1D85049C00BF1C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JWTagViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWTagView.app/JWTagView";
+			};
+			name = Debug;
+		};
+		DAA2560D1D85049C00BF1C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JWTagViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWTagView.app/JWTagView";
+			};
+			name = Release;
+		};
+		DAA2560F1D85049C00BF1C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JWTagViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JWTagView;
+			};
+			name = Debug;
+		};
+		DAA256101D85049C00BF1C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JWTagViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JW.JWTagViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JWTagView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAA255D61D85049C00BF1C5F /* Build configuration list for PBXProject "JWTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA256061D85049C00BF1C5F /* Debug */,
+				DAA256071D85049C00BF1C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA256081D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA256091D85049C00BF1C5F /* Debug */,
+				DAA2560A1D85049C00BF1C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAA2560B1D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA2560C1D85049C00BF1C5F /* Debug */,
+				DAA2560D1D85049C00BF1C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAA2560E1D85049C00BF1C5F /* Build configuration list for PBXNativeTarget "JWTagViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA2560F1D85049C00BF1C5F /* Debug */,
+				DAA256101D85049C00BF1C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAA255D31D85049C00BF1C5F /* Project object */;
+}
