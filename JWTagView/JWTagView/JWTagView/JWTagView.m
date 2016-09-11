@@ -73,9 +73,9 @@
         
         // 修正图片、Title的位置
         self.titleEdgeInsets = UIEdgeInsetsMake(0,
-                                                -(tempButtonH/2 + _itemMargin),
+                                                -(tempButtonH/2 + _itemMargin/2),
                                                 0,
-                                                tempButtonH/2 + _itemMargin);
+                                                tempButtonH/2 + _itemMargin/2);
         self.imageEdgeInsets = UIEdgeInsetsMake(0,
                                                 tempTitleW + _itemMargin/2,
                                                 0,
