@@ -37,6 +37,7 @@
     config.tagAutoUpdateHeight = NO;
     config.tagDeleteImage = nil;
     config.tagKeepSeleted = YES;
+    config.tagInsideHorizontalMargin = 10;
     
     [tagView addTags:tags];
 }

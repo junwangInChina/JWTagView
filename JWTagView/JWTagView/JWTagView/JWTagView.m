@@ -11,7 +11,8 @@
 #pragma mark - JWTagItem
 @interface JWTagItem : UIButton
 
-@property (nonatomic, assign) CGFloat itemMargin;
+@property (nonatomic, assign) CGFloat itemHorizontalMargin;
+@property (nonatomic, assign) CGFloat itemVerticalMargin;
 
 + (JWTagItem *)itemWithConfig:(JWTagConfig *)config;
 
@@ -23,7 +24,8 @@
 {
     JWTagItem *tempItem = [JWTagItem buttonWithType:UIButtonTypeCustom];
     tempItem.clipsToBounds = YES;
-    tempItem.itemMargin = config.tagInsideMargin;
+    tempItem.itemHorizontalMargin = config.tagInsideHorizontalMargin;
+    tempItem.itemVerticalMargin = config.tagInsideVerticalMargin;
     if (config.tagBorderWidth > 0 && config.tagBorderColor != [UIColor clearColor])
     {
         tempItem.layer.borderWidth = config.tagBorderWidth;
@@ -68,25 +70,25 @@
     CGFloat tempTitleH = tempRect.size.height;
     
     // 获取按钮的高度
-    CGFloat tempButtonH = tempTitleH + _itemMargin * 2;
+    CGFloat tempButtonH = tempTitleH + _itemVerticalMargin * 2;
     
     // 获取按钮整个宽度
-    CGFloat tempButtonW = tempTitleW + _itemMargin * 2;
+    CGFloat tempButtonW = tempTitleW + _itemHorizontalMargin * 2;
     if ([JWTagConfig config].tagDeleteImage)
     {
         // 图片的宽度、高度=按钮高度的一半
         tempButtonW += tempButtonH/2;
-        tempButtonW += _itemMargin;
+        tempButtonW += _itemHorizontalMargin;
         
         // 修正图片、Title的位置
         self.titleEdgeInsets = UIEdgeInsetsMake(0,
-                                                -(tempButtonH/2 + _itemMargin/2),
+                                                -(tempButtonH/2 + _itemHorizontalMargin/2),
                                                 0,
-                                                tempButtonH/2 + _itemMargin/2);
+                                                tempButtonH/2 + _itemHorizontalMargin/2);
         self.imageEdgeInsets = UIEdgeInsetsMake(0,
-                                                tempTitleW + _itemMargin/2,
+                                                tempTitleW + _itemHorizontalMargin/2,
                                                 0,
-                                                -(tempTitleW + _itemMargin/2));
+                                                -(tempTitleW + _itemHorizontalMargin/2));
     }
     
     // 内部计算Item的size
@@ -454,7 +456,8 @@ static JWTagConfig *config;
     if (self)
     {
         self.tagMargin = 10;
-        self.tagInsideMargin = 5;
+        self.tagInsideHorizontalMargin = 5;
+        self.tagInsideVerticalMargin = 5;
         self.tagDeleteImage = nil;
         self.tagTitleNormalColor = [UIColor redColor];
         self.tagTitleHighlightColor = [UIColor whiteColor];

@@ -63,9 +63,14 @@
 @property (nonatomic, assign) CGFloat tagMargin;
 
 /**
- *  Tag内部Margin(标题与图片之间的) default is 5
+ *  Tag内部Margin(标题与图片之间的,水平方向) default is 5
  */
-@property (nonatomic, assign) CGFloat tagInsideMargin;
+@property (nonatomic, assign) CGFloat tagInsideHorizontalMargin;
+
+/**
+ *  Tag内部Margin(标题与图片之间的,垂直方向) default is 5
+ */
+@property (nonatomic, assign) CGFloat tagInsideVerticalMargin;
 
 /**
  *  Tag的删除图标 ❌ default is nil
