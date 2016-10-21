@@ -18,7 +18,7 @@
 /**
  *  Tag点击回调的Block
  */
-@property (nonatomic, copy) void(^tagComplete)(NSString *tapTag);
+@property (nonatomic, copy) void(^tagComplete)(NSString *tapTag, BOOL seleted);
 
 /**
  *  添加一个Tag
@@ -73,9 +73,14 @@
 @property (nonatomic, strong) UIImage *tagDeleteImage;
 
 /**
- *  Tag标题颜色 defaule is [UIColor redColor]
+ *  Tag标题普通状态颜色 defaule is [UIColor redColor]
  */
-@property (nonatomic, strong) UIColor *tagTitleColor;
+@property (nonatomic, strong) UIColor *tagTitleNormalColor;
+
+/**
+ *  Tag标题选中、高亮状态颜色 defaule is [UIColor whiteColor]
+ */
+@property (nonatomic, strong) UIColor *tagTitleHighlightColor;
 
 /**
  *  Tag标题字体 default is [UIFont systemFontOfSize:13]
@@ -100,12 +105,22 @@
 /**
  *  Tag的背景色 default is [UIColor whiteColor]
  */
-@property (nonatomic, strong) UIColor *tagBackgroundColor;
+@property (nonatomic, strong) UIColor *tagBackgroundNormalColor;
 
 /**
- *  Tag的背景图 default is nil
+ *  Tag的背景色 default is [UIColor redColor]
  */
-@property (nonatomic, strong) UIImage *tagBackgroundImage;
+@property (nonatomic, strong) UIColor *tagBackgroundHighlightColor;
+
+/**
+ *  Tag的背景图 default is tagBackgroundNormalColor 生成的
+ */
+@property (nonatomic, strong) UIImage *tagBackgroundNormalImage;
+
+/**
+ *  Tag的背景图 default is tagBackgroundHighlightColor 生成的
+ */
+@property (nonatomic, strong) UIImage *tagBackgroundHighlightImage;
 
 /**
  *  Tag是否支持拖动 default is NO
@@ -116,5 +131,10 @@
  *  Tag是否自动更新本身的高度 default is YES
  */
 @property (nonatomic, assign) BOOL tagAutoUpdateHeight;
+
+/**
+ *  Tag是否保持选中状态 default is NO
+ */
+@property (nonatomic, assign) BOOL tagKeepSeleted;
 
 @end

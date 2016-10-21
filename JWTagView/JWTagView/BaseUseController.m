@@ -49,7 +49,7 @@
         config.tagDeleteImage = [UIImage imageNamed:@"delete"];
         
         __weak typeof (self) weakself = self;
-        _tagView.tagComplete = ^(NSString *tapTag){
+        _tagView.tagComplete = ^(NSString *tapTag, BOOL seleted){
             NSLog(@"删除 %@",tapTag);
             [weakself.tagView deleteTag:tapTag];
         };

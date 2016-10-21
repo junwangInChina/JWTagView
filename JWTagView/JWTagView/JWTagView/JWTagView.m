@@ -37,13 +37,20 @@
     {
         [tempItem setImage:config.tagDeleteImage forState:UIControlStateNormal];
     }
-    [tempItem setTitleColor:config.tagTitleColor forState:UIControlStateNormal];
+    [tempItem setTitleColor:config.tagTitleNormalColor
+                   forState:UIControlStateNormal];
+    [tempItem setTitleColor:config.tagTitleHighlightColor
+                   forState:UIControlStateSelected];
+    [tempItem setTitleColor:config.tagTitleHighlightColor
+                   forState:UIControlStateHighlighted];
+    [tempItem setBackgroundImage:config.tagBackgroundNormalImage
+                        forState:UIControlStateNormal];
+    [tempItem setBackgroundImage:config.tagBackgroundHighlightImage
+                        forState:UIControlStateSelected];
+    [tempItem setBackgroundImage:config.tagBackgroundHighlightImage
+                        forState:UIControlStateHighlighted];
     tempItem.titleLabel.font = config.tagTitleFont;
-    [tempItem setBackgroundColor:config.tagBackgroundColor];
-    if (config.tagBackgroundImage)
-    {
-        [tempItem setBackgroundImage:config.tagBackgroundImage forState:UIControlStateNormal];
-    }
+    
     
     return tempItem;
 }
@@ -323,9 +330,14 @@
 - (void)tagAction:(id)sender
 {
     JWTagItem *tempItem = (JWTagItem *)sender;
+    if ([[JWTagConfig config] tagKeepSeleted])
+    {
+        tempItem.selected = !tempItem.selected;
+    }
+    
     if (self.tagComplete)
     {
-        self.tagComplete(tempItem.currentTitle);
+        self.tagComplete(tempItem.currentTitle, tempItem.selected);
     }
 }
 
@@ -444,17 +456,47 @@ static JWTagConfig *config;
         self.tagMargin = 10;
         self.tagInsideMargin = 5;
         self.tagDeleteImage = nil;
-        self.tagTitleColor = [UIColor redColor];
+        self.tagTitleNormalColor = [UIColor redColor];
+        self.tagTitleHighlightColor = [UIColor whiteColor];
         self.tagTitleFont = [UIFont systemFontOfSize:13];
         self.tagBorderColor = [UIColor clearColor];
         self.tagBorderWidth = 1.0;
         self.tagCornerRadius = 5;
-        self.tagBackgroundColor = [UIColor whiteColor];
-        self.tagBackgroundImage = nil;
+        self.tagBackgroundNormalColor = [UIColor whiteColor];
+        self.tagBackgroundHighlightColor = [UIColor redColor];
         self.tagCanPanSort = NO;
         self.tagAutoUpdateHeight = YES;
+        self.tagKeepSeleted = NO;
     }
     return self;
 }
 
+- (void)setTagBackgroundNormalColor:(UIColor *)tagBackgroundNormalColor
+{
+    _tagBackgroundNormalColor = tagBackgroundNormalColor;
+    
+    _tagBackgroundNormalImage = [self imageWithColor:tagBackgroundNormalColor];
+}
+
+- (void)setTagBackgroundHighlightColor:(UIColor *)tagBackgroundHighlightColor
+{
+    _tagBackgroundHighlightColor = tagBackgroundHighlightColor;
+    
+    _tagBackgroundHighlightImage = [self imageWithColor:tagBackgroundHighlightColor];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 10.0f, 10.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 @end

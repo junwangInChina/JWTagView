@@ -25,8 +25,8 @@
     JWTagView *tagView = [[JWTagView alloc] init];
     tagView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:tagView];
-    tagView.tagComplete = ^(NSString *tapTag){
-        NSLog(@"点击 %@",tapTag);
+    tagView.tagComplete = ^(NSString *tapTag, BOOL seleted){
+        NSLog(@"点击 %@ %@",tapTag,seleted?@"选中":@"取消选中");
     };
     
     NSArray *tags = @[@"飞狐外传",@"雪山飞狐",@"连城诀",@"天龙八部",@"射雕英雄传",@"白马啸西风",@"鹿鼎记",@"笑傲江湖",@"书剑恩仇录",@"神雕侠侣",@"侠客行",@"倚天屠龙记",@"碧血剑",@"鸳鸯刀"];
@@ -36,6 +36,8 @@
     config.tagCanPanSort = YES;
     config.tagAutoUpdateHeight = NO;
     config.tagDeleteImage = nil;
+    config.tagKeepSeleted = YES;
+    
     [tagView addTags:tags];
 }
 
