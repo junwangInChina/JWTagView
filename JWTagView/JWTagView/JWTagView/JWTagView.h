@@ -93,9 +93,14 @@
 @property (nonatomic, strong) UIFont *tagTitleFont;
 
 /**
- *  Tag边框颜色 defaule is [UIColor clearColor]
+ *  Tag边框普通状态颜色 defaule is [UIColor clearColor]
  */
-@property (nonatomic, strong) UIColor *tagBorderColor;
+@property (nonatomic, strong) UIColor *tagBorderNormalColor;
+
+/**
+ *  Tag边框高亮状态颜色 defaule is [UIColor clearColor]
+ */
+@property (nonatomic, strong) UIColor *tagBorderHighlightColor;
 
 /**
  *  Tag边框宽度 default is 0(无边框)
@@ -151,5 +156,20 @@
  *  Tag列与列之间的间距，需配合tagColumn使用，default is 0
  */
 @property (nonatomic, assign) CGFloat tagColumnMargin;
+
+/**
+ *  Tag的Item高度，需配合tagColumn使用，default is 0
+ */
+@property (nonatomic, assign) CGFloat tagItemHeight;
+
+/**
+ *  Tag默认选中，default is NO
+ */
+@property (nonatomic, assign) BOOL tagDefaultSeleted;
+
+/**
+ *  Tag是否可响应事件，default is YES
+ */
+@property (nonatomic, assign) BOOL tagEnabled;
 
 @end

@@ -31,7 +31,8 @@
     
     NSArray *tags = @[@"飞狐外传",@"雪山飞狐",@"连城诀",@"天龙八部",@"射雕英雄传",@"白马啸西风",@"鹿鼎记",@"笑傲江湖",@"书剑恩仇录",@"神雕侠侣",@"侠客行",@"倚天屠龙记",@"碧血剑",@"鸳鸯刀"];
     JWTagConfig *config = [JWTagConfig config];
-    config.tagBorderColor = [UIColor orangeColor];
+    config.tagBorderNormalColor = [UIColor orangeColor];
+    config.tagBorderHighlightColor = [UIColor blackColor];
     config.tagBorderWidth = 0.5;
     config.tagCanPanSort = YES;
     config.tagAutoUpdateHeight = NO;
@@ -40,6 +41,9 @@
     config.tagInsideHorizontalMargin = 10;
     config.tagColumn = 3;
     config.tagColumnMargin = 10;
+    config.tagItemHeight = 50;
+    config.tagDefaultSeleted = YES;
+    //config.tagEnabled = NO;
     
     [tagView addTags:tags];
 }

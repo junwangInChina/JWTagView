@@ -26,10 +26,18 @@
     tempItem.clipsToBounds = YES;
     tempItem.itemHorizontalMargin = config.tagInsideHorizontalMargin;
     tempItem.itemVerticalMargin = config.tagInsideVerticalMargin;
-    if (config.tagBorderWidth > 0 && config.tagBorderColor != [UIColor clearColor])
+    if (config.tagBorderWidth > 0)
     {
-        tempItem.layer.borderWidth = config.tagBorderWidth;
-        tempItem.layer.borderColor = config.tagBorderColor.CGColor;
+        if (config.tagDefaultSeleted && config.tagBorderHighlightColor != [UIColor clearColor])
+        {
+            tempItem.layer.borderWidth = config.tagBorderWidth;
+            tempItem.layer.borderColor = config.tagBorderHighlightColor.CGColor;
+        }
+        else if (config.tagBorderNormalColor != [UIColor clearColor])
+        {
+            tempItem.layer.borderWidth = config.tagBorderWidth;
+            tempItem.layer.borderColor = config.tagBorderNormalColor.CGColor;
+        }
     }
     if (config.tagCornerRadius > 0)
     {
@@ -52,7 +60,8 @@
     [tempItem setBackgroundImage:config.tagBackgroundHighlightImage
                         forState:UIControlStateHighlighted];
     tempItem.titleLabel.font = config.tagTitleFont;
-    
+    tempItem.selected = config.tagDefaultSeleted;
+    tempItem.userInteractionEnabled = config.tagEnabled;
     
     return tempItem;
 }
@@ -281,7 +290,7 @@
     // 按钮宽度，固定
     CGFloat tempButtonW = (self.bounds.size.width - (config.tagColumn) * config.tagColumnMargin) / config.tagColumn;
     // 获取按钮的高度
-    CGFloat tempButtonH = CGRectGetHeight(currentItem.frame);
+    CGFloat tempButtonH = config.tagItemHeight > 0 ? config.tagItemHeight : CGRectGetHeight(currentItem.frame);
     
     // 定位按钮的X－Y
     CGFloat tempButtonX = preItem ? CGRectGetMaxX(preItem.frame) + config.tagColumnMargin : config.tagColumnMargin / 2;
@@ -383,9 +392,22 @@
 - (void)tagAction:(id)sender
 {
     JWTagItem *tempItem = (JWTagItem *)sender;
-    if ([[JWTagConfig config] tagKeepSeleted])
+    JWTagConfig *tempConfig = [JWTagConfig config];
+    if (!tempConfig.tagEnabled) return;
+    
+    if ([tempConfig tagKeepSeleted])
     {
         tempItem.selected = !tempItem.selected;
+        
+        if (tempItem.selected && tempConfig.tagBorderHighlightColor && tempConfig.tagBorderWidth > 0)
+        {
+            tempItem.layer.borderColor = tempConfig.tagBorderHighlightColor.CGColor;
+
+        }
+        else if (tempConfig.tagBorderNormalColor && tempConfig.tagBorderWidth > 0)
+        {
+            tempItem.layer.borderColor = tempConfig.tagBorderNormalColor.CGColor;
+        }
     }
     
     if (self.tagComplete)
@@ -513,7 +535,8 @@ static JWTagConfig *config;
         self.tagTitleNormalColor = [UIColor redColor];
         self.tagTitleHighlightColor = [UIColor whiteColor];
         self.tagTitleFont = [UIFont systemFontOfSize:13];
-        self.tagBorderColor = [UIColor clearColor];
+        self.tagBorderNormalColor = [UIColor clearColor];
+        self.tagBorderHighlightColor = [UIColor clearColor];
         self.tagBorderWidth = 1.0;
         self.tagCornerRadius = 5;
         self.tagBackgroundNormalColor = [UIColor whiteColor];
@@ -523,6 +546,9 @@ static JWTagConfig *config;
         self.tagKeepSeleted = NO;
         self.tagColumn = 0;
         self.tagColumnMargin = 0;
+        self.tagItemHeight = 0;
+        self.tagDefaultSeleted = NO;
+        self.tagEnabled = YES;
     }
     return self;
 }
