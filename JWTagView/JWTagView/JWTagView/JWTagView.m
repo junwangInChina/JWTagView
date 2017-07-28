@@ -249,6 +249,56 @@
 #pragma mark - Private Method
 - (void)configItemFrameWithIndex:(NSInteger)index
 {
+    JWTagConfig *config = [JWTagConfig config];
+    if (config.tagColumn > 0)
+    {
+        // 固定列数
+        [self fixedColumn:index];
+    }
+    else
+    {
+        // 根据按钮大小，自动计算
+        [self automaticCalculation:index];
+    }
+}
+
+- (void)fixedColumn:(NSInteger)index
+{
+    JWTagConfig *config = [JWTagConfig config];
+
+    JWTagItem *preItem;
+    if (index - 1 >= 0)
+    {
+        preItem = self.tagItemsArray[index-1];
+    }
+    
+    JWTagItem *currentItem;
+    if (index >= 0)
+    {
+        currentItem = self.tagItemsArray[index];
+    }
+
+    // 按钮宽度，固定
+    CGFloat tempButtonW = (self.bounds.size.width - (config.tagColumn) * config.tagColumnMargin) / config.tagColumn;
+    // 获取按钮的高度
+    CGFloat tempButtonH = CGRectGetHeight(currentItem.frame);
+    
+    // 定位按钮的X－Y
+    CGFloat tempButtonX = preItem ? CGRectGetMaxX(preItem.frame) + config.tagColumnMargin : config.tagColumnMargin / 2;
+    CGFloat tempButtonY = preItem ? CGRectGetMinY(preItem.frame) : config.tagMargin;
+
+    // 判断当前按钮是显示在当前行、还是需要换行
+    if (tempButtonX + tempButtonW + config.tagColumnMargin/2 > self.bounds.size.width)
+    {
+        tempButtonX = config.tagColumnMargin / 2;
+        tempButtonY = CGRectGetMaxY(preItem.frame) + config.tagMargin;
+    }
+    
+    currentItem.frame = CGRectMake(tempButtonX, tempButtonY, tempButtonW, tempButtonH);
+}
+
+- (void)automaticCalculation:(NSInteger)index
+{
     JWTagItem *preItem;
     if (index - 1 >= 0)
     {
@@ -280,6 +330,7 @@
     }
     
     currentItem.frame = CGRectMake(tempButtonX, tempButtonY, tempButtonW, tempButtonH);
+
 }
 
 - (void)updateItemsTag
@@ -470,6 +521,8 @@ static JWTagConfig *config;
         self.tagCanPanSort = NO;
         self.tagAutoUpdateHeight = YES;
         self.tagKeepSeleted = NO;
+        self.tagColumn = 0;
+        self.tagColumnMargin = 0;
     }
     return self;
 }

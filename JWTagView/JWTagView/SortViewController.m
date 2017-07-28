@@ -38,6 +38,8 @@
     config.tagDeleteImage = nil;
     config.tagKeepSeleted = YES;
     config.tagInsideHorizontalMargin = 10;
+    config.tagColumn = 3;
+    config.tagColumnMargin = 10;
     
     [tagView addTags:tags];
 }

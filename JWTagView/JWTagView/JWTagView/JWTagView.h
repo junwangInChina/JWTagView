@@ -142,4 +142,14 @@
  */
 @property (nonatomic, assign) BOOL tagKeepSeleted;
 
+/**
+ *  Tag列数，大于0时，等比分配宽度，default is 0
+ */
+@property (nonatomic, assign) NSInteger tagColumn;
+
+/**
+ *  Tag列与列之间的间距，需配合tagColumn使用，default is 0
+ */
+@property (nonatomic, assign) CGFloat tagColumnMargin;
+
 @end
